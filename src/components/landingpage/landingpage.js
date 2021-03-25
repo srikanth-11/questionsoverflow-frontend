@@ -21,21 +21,21 @@ function Landingpage() {
           <span className="grey-color"></span>
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label className="menu-icon" htmlhtmlFor="menu-btn">
+        <label className="menu-icon" htmlFor="menu-btn">
           <span className="navicon"></span>
         </label>
         <ul className="menu">
-          <Link to="/login">
-            <li>
-              <a>Login</a>
-
-            </li>
+        <Link to="/login">
+          <li>
+            <a>Login</a>
+           
+          </li>
           </Link>
           <Link to="/signup">
-            <li>
-              <a>Signup</a>
-
-            </li>
+          <li>
+            <a>Signup</a>
+           
+          </li>
           </Link>
         </ul>
       </header>
@@ -57,7 +57,7 @@ function Landingpage() {
 
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
-              </div>
+               </div>
             </div>
           </div>
           <div className="greeting-image-div">
