@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect}from 'react';
 import { useAlert } from "react-alert";
 import { username, token } from '../../context/usercontext'
 import MyPopup from '../../util/mypopup'
@@ -10,6 +10,7 @@ import {
   Icon,
   Label,
 } from 'semantic-ui-react';
+import { useEffect } from "react";
 
 function Vote({ questionid, id, votes, unvotes }) {
   const [votecolor, setVotecolor] = useState("teal");
@@ -26,8 +27,8 @@ function Vote({ questionid, id, votes, unvotes }) {
 
   useEffect(() => {
     if (user && unvotes.find((unvote) => unvote.username === user.username)) {
-      setVotecolor("red");
-    } else setVotecolor("teal");
+      setUnvotecolor("red");
+    } else setUnvotecolor("teal");
   }, [user, unvotes]);
 
 
