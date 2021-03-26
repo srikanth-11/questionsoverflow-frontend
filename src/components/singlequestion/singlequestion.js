@@ -108,7 +108,7 @@ function Singlequestion(props) {
                       <Card.Header>{answer.username}({moment(answer.createdAt).fromNow()})</Card.Header>
                       <Card.Meta></Card.Meta>
                       <Card.Description>{answer.content}</Card.Description>
-                      <Vote questionid={questionId} id={answer._id} votes={answer.votes.length} unvotes={answer.unvotes.length}></Vote>
+                      <Vote questionid={questionId} id={answer._id} votes={answer.votes} unvotes={answer.unvotes}></Vote>
                       <Comment questionid={questionId} id={answer._id}></Comment>
                       {answer.comments && answer.comments.map((comment) => (
                         <Card fluid key={comment._id}>

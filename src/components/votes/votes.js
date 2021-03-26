@@ -12,10 +12,25 @@ import {
 } from 'semantic-ui-react';
 
 function Vote({ questionid, id, votes, unvotes }) {
+  const [votecolor, setVotecolor] = useState("teal");
+  const [unvotecolor,setUnvotecolor] = useState("teal")
   const alert = useAlert();
   const user = {
     username: username
   }
+  useEffect(() => {
+    if (user && votes.find((vote) => vote.username === user.username)) {
+      setVotecolor("red");
+    } else setVotecolor("teal");
+  }, [user, votes]);
+
+  useEffect(() => {
+    if (user && unvotes.find((unvote) => unvote.username === user.username)) {
+      setVotecolor("red");
+    } else setVotecolor("teal");
+  }, [user, unvotes]);
+
+
   const submitVote = async () => {
     const data = {
       id: questionid,
@@ -70,12 +85,12 @@ function Vote({ questionid, id, votes, unvotes }) {
   return <>    <div className="float-right">
     <MyPopup content="this answer was helpul">
     <Button as='div' labelPosition='right' onClick={submitVote}>
-      <Button color='teal'>
+      <Button color={votecolor}>
         <Icon name='comment' />
 votes
 </Button>
-      <Label as='a' basic color='teal' pointing='left'>
-        {votes}
+      <Label as='a' basic color={votecolor} pointing='left'>
+        {votes.length}
       </Label>
     </Button>
     </MyPopup>
@@ -84,12 +99,12 @@ votes
     <div className=" float-right">
     <MyPopup content="this answer was not helpful">
       <Button as='div' labelPosition='right' onClick={submitUnvote}>
-        <Button color='teal'>
+        <Button color={unvotecolor}>
           <Icon name='comment' />
 unvotes
 </Button>
-        <Label as='a' basic color='teal' pointing='left'>
-          {unvotes}
+        <Label as='a' basic color={unvotecolor} pointing='left'>
+          {unvotes.length}
         </Label>
       </Button>
       </MyPopup>
