@@ -75,6 +75,7 @@ function Vote({ questionid, id, votes, unvotes }) {
     
     if (result) {
       alert.success("unvote send")
+      window.location.reload()
 } else {
       alert.error("error occured")
     }
