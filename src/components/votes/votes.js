@@ -10,7 +10,6 @@ import {
   Icon,
   Label,
 } from 'semantic-ui-react';
-import { useEffect } from "react";
 
 function Vote({ questionid, id, votes, unvotes }) {
   const [votecolor, setVotecolor] = useState("teal");
