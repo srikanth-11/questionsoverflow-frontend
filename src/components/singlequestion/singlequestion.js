@@ -50,7 +50,7 @@ function Singlequestion(props) {
     };
 
     fetchData();
-  }, []);
+  }, [questionId]);
 
 
 
