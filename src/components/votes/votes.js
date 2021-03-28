@@ -49,7 +49,7 @@ function Vote({ questionid, id, votes, unvotes }) {
     console.log(result)
     if (result) {
       alert.success("vote send")
-      window.location.reload();
+      
 
 
     } else {
@@ -75,6 +75,7 @@ function Vote({ questionid, id, votes, unvotes }) {
     
     if (result) {
       alert.success("unvote send")
+      
 } else {
       alert.error("error occured")
     }
