@@ -22,13 +22,13 @@ function Vote({ questionid, id, votes, unvotes }) {
     if (user && votes.find((vote) => vote.username === user.username)) {
       setVotecolor("red");
     } else setVotecolor("teal");
-  }, [user, votes]);
+  }, [user, votes,alert]);
 
   useEffect(() => {
     if (user && unvotes.find((unvote) => unvote.username === user.username)) {
       setUnvotecolor("red");
     } else setUnvotecolor("teal");
-  }, [user, unvotes]);
+  }, [user, unvotes,alert]);
 
 
   const submitVote = async () => {
@@ -49,7 +49,7 @@ function Vote({ questionid, id, votes, unvotes }) {
     console.log(result)
     if (result) {
       alert.success("vote send")
-      window.location.reload();
+      
 
 
     } else {
@@ -75,7 +75,7 @@ function Vote({ questionid, id, votes, unvotes }) {
     
     if (result) {
       alert.success("unvote send")
-      window.location.reload()
+      
 } else {
       alert.error("error occured")
     }

@@ -44,7 +44,7 @@ function Questioncard() {
     };
 
     fetchData();
-  }, []);
+  }, [question]);
   return <div className="container-fluid">
     <h1 style={{ justifyContent: "center", textAlign: "center" }}>
       {" "}
