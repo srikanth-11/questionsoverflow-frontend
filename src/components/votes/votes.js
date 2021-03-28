@@ -22,13 +22,13 @@ function Vote({ questionid, id, votes, unvotes }) {
     if (user && votes.find((vote) => vote.username === user.username)) {
       setVotecolor("red");
     } else setVotecolor("teal");
-  }, [user, votes]);
+  }, [user, votes,alert]);
 
   useEffect(() => {
     if (user && unvotes.find((unvote) => unvote.username === user.username)) {
       setUnvotecolor("red");
     } else setUnvotecolor("teal");
-  }, [user, unvotes]);
+  }, [user, unvotes,alert]);
 
 
   const submitVote = async () => {
