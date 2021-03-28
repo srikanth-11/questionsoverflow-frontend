@@ -76,6 +76,8 @@ function Vote({ questionid, id, votes, unvotes }) {
     if (result) {
       alert.success("unvote send")
       
+=======
+>>>>>>> parent of fc1d61b (vote button color changed)
 } else {
       alert.error("error occured")
     }
