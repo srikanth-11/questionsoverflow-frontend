@@ -34,7 +34,7 @@ function Comment({ questionid, id }) {
     );
     if (result) {
       alert.success("comment created")
-      window.location.reload()
+      
     } else {
       alert.error("comment not created")
     }
