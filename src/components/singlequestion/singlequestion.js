@@ -53,7 +53,7 @@ function Singlequestion(props) {
     };
 
     fetchData();
-  }, [questionId,question.comments.length]);
+  }, []);
 
 
 
