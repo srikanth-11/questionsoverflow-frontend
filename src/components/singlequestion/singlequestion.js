@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory, Link } from "react-router-dom";
 
 import axios from 'axios'
@@ -8,7 +8,7 @@ import Vote from '../../components/votes/votes'
 import Loader from "react-loader-spinner";
 import auth from '../../service/auth'
 import { username, token } from '../../context/usercontext'
-import {countContext} from '../../context/context'
+
 
 import {
   Card
@@ -16,7 +16,7 @@ import {
 import Createanswer from '../createanswer/createanswer';
 
 function Singlequestion(props) {
-  const [count,setCount]= useContext(countContext)
+  
   const history = useHistory()
   const [question, setQuestion] = useState([]);
   const questionId = props.match.params.questionId;
@@ -30,8 +30,7 @@ function Singlequestion(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      count++
-      setCount(count)
+      
       setloader("true")
       const data = {
         id: questionId
@@ -54,7 +53,7 @@ function Singlequestion(props) {
     };
 
     fetchData();
-  }, [questionId,count]);
+  }, [questionId,question.comments.length]);
 
 
 
