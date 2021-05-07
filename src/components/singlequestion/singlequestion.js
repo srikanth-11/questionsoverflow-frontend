@@ -30,6 +30,8 @@ function Singlequestion(props) {
 
   useEffect(() => {
     const fetchData = async () => {
+      count++
+      setCount(count)
       setloader("true")
       const data = {
         id: questionId
