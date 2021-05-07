@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { username, token } from '../../context/usercontext'
 import { useAlert } from "react-alert";
+import {countContext} from '../../context/context'
 
 import axios from 'axios';
 
@@ -11,6 +12,7 @@ import {
 
 
 function Comment({ questionid, id }) {
+  let [count,setCount]= useContext(countContext)
   const alert = useAlert();
   const user = {
     username: username
@@ -33,6 +35,8 @@ function Comment({ questionid, id }) {
       }
     );
     if (result) {
+      count++
+      setCount(count)
       alert.success("comment created")
       
     } else {

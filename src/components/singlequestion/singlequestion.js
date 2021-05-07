@@ -8,6 +8,7 @@ import Vote from '../../components/votes/votes'
 import Loader from "react-loader-spinner";
 import auth from '../../service/auth'
 import { username, token } from '../../context/usercontext'
+import {countContext} from '../../context/context'
 
 import {
   Card
@@ -15,6 +16,7 @@ import {
 import Createanswer from '../createanswer/createanswer';
 
 function Singlequestion(props) {
+  const [count,setCount]= useContext(countContext)
   const history = useHistory()
   const [question, setQuestion] = useState([]);
   const questionId = props.match.params.questionId;
@@ -50,7 +52,7 @@ function Singlequestion(props) {
     };
 
     fetchData();
-  }, []);
+  }, [count]);
 
 
 
