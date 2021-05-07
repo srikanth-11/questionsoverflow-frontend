@@ -52,7 +52,7 @@ function Singlequestion(props) {
     };
 
     fetchData();
-  }, [count]);
+  }, [questionId,count]);
 
 
 
