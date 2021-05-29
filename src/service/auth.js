@@ -15,6 +15,7 @@ class Auth {
             if (res.data) {
                 localStorage.setItem('token', res.data.token);
                 this.isAuthenticatedUser = true
+                
             }
             console.log(res.data)
             return res.data;
