@@ -77,16 +77,16 @@ function Landingpage() {
             <p className="subTitle contact-subtitle">Contact us for any problems about our product</p>
 
             <div className="contact-text-div">
-              <a className="contact-detail" href="tel:8374242180">
-                8374242180
+              <a className="contact-detail" href="tel:9848282503">
+                9848282503
               </a>
               <br />
               <br />
               <a
                 className="contact-detail-email"
-                href="mailto:saikiranchatlapalli84@gmail.com"
+                href="mailto:kasireddysrikanth27@gmail.com"
               >
-                saikiranchatlapalli84@gmail.com
+                kasireddysrikanth27@gmail.com
               </a>
               <br />
               <br />
